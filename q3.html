@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Question 3 </title>
+</head>
+<body>
+  <script src="q3.js">
+    let digitsum = (n) => {
+      let sum = 0; 
+    while(n > 0){
+      sum = sum + n%10; 
+      n = Math.floor(n/10);
+      }
+    return sum;
+  }
+  console.log(digitsum(192));
+    </script>
+</body>
+</html>
