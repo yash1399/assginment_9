@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script> 
+  class Cuboid { 
+  constructor(height, width, length){
+    this.h = height ;  
+    this.w = width ; 
+    this.l = length; 
+  }
+
+  surfaceArea(){
+    let surface_area = 2*((this.l*this.w) + (this.l * this.h) + (this.w * this.h));
+    return surface_area;
+
+
+  }
+
+  volume() { 
+    let vol = this.l * this.w * this.h ;
+    return vol; 
+
+  }
+
+}
+
+let calCubiod = new Cuboid(4 , 1, 2); 
+console.log("Surface area of Cuboid: " + calCubiod.surfaceArea()); 
+console.log("Volume for Cuboid:  " + calCubiod.volume()); 
+
+
+class Cube extends Cuboid {
+  constructor ( side ){
+    super( side , side , side) ; 
+    this.s = side; 
+
+
+  }
+  surfaceArea() {
+    let surface_area = this.s * this.s * this.s ;
+    return surface_area; 
+
+  }
+
+  volume(){
+    let vol = 6* ( this.s * this.s); 
+    return vol;
+    
+  }
+
+}
+
+let calCube = new Cube (4) ;
+console.log( "Surface area of cube: " + calCube.surfaceArea() );
+console.log( "Volume of Cube : " + calCube.volume() ); 
+ </script>
+  
+</body>
+</html>
